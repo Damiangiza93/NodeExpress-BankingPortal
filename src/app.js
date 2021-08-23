@@ -8,6 +8,8 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+fs.readFileSync('./src/json/accounts.json', 'utf-8')
+
 app.get('/', function (req, res) {
     res.render('index', {title: 'Index'})
 })
